@@ -1,0 +1,150 @@
+:root {
+    --blade-hue: 120;
+    --blade-lightness: 50%;
+  }
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #434343 0%, #000000 74%);
+    height: 100vh;
+    color: white;
+}
+
+nav{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+.option{
+    /* border: 2px solid blue; */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.option input{
+    position: absolute;
+    top: 30px;
+}
+
+header label{
+    font-size: 20px;
+}
+
+main{
+    /* border: 2px solid blue; */
+    margin: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.handel{
+    /* background-color: #000000; */
+    background: linear-gradient(147deg, #868f96 0%, #596164 74%); 
+    border-radius: 0 0 20px 20px;
+    height: 100px;
+    width: 10px;
+}
+
+#on-off{
+    border-radius: 20px 20px 20px 20px;
+    z-index: 10;
+    transform: scale(0);
+}
+
+.sword{
+    height: 300px;
+    width: 10px;
+    background: white;
+    border-radius: 20px 20px 0px 0px;
+    position: absolute;
+    bottom: 100px;
+
+    box-shadow: inset 0 0 4px
+      hsl(var(--blade-hue) 100% var(--blade-lightness) / 1),
+    0 0 1em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.8),
+    0 0 1.5em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.7),
+    0 0 2em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.5),
+    0 0 3em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.3),
+    0 0 5em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.2);
+
+  transition: transform 50ms ease-out;
+  transform-origin: bottom;
+}
+
+#on-off:not(:checked) + .sword {
+    transform: scaleY(0);
+}
+  
+#on-off:checked + .sword {
+    transform: scaleY(1);
+}
+
+.r{
+    --blade-hue: 360;
+}
+
+.g{
+    --blade-hue: 120;
+}
+
+.y{
+    --blade-hue: 60;
+}
+
+.p{
+    --blade-hue: 290;
+}
+
+.b{
+    --blade-hue: 195;
+}
+
+  @media only screen and (max-width: 890px) {
+    .whole {
+      width: 100vh;
+      margin-left: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 755px) {
+    .whole {
+      width: 750px;
+      margin-left: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 687px) {
+    .whole {
+      width: 680px;
+      margin-left: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 582px) {
+    .whole {
+      width: 580px;
+      margin-left: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .whole {
+      width: 478px;
+      margin-left: 0px;
+    }
+  }
+
+  
